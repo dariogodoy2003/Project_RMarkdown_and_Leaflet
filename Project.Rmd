@@ -1,0 +1,20 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## June 30, 2024
+
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
+library(leaflet)
+library(tidyverse)
+my_map <- leaflet() %>% addTiles()
+#-34.77214996545288, -58.27046083229708
+my_map <- my_map %>% 
+  addMarkers(lat=-34.77214996545288, lng=-58.27046083229708,
+             popup = "Hospital El Cruce")
+```
+
+```{r, echo=FALSE}
+my_map
+```
+
